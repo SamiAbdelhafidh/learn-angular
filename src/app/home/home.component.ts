@@ -1,19 +1,27 @@
 import { Component } from '@angular/core';
+import { CommonModule,CurrencyPipe, DatePipe, TitleCasePipe,UpperCasePipe } from '@angular/common';
 
 import { NgModule } from '@angular/core';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [CommonModule,UpperCasePipe,],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  profile={
-firstName:"sami",
-lastName:"abedelhafidh",
-age:"23"}
-linkImage="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg8184XmlGy4JPXNX4NOOD-KDX1I8u4jx7Xw&s"
+ /// profile={
+///firstName:"sami",
+///lastName:"abedelhafidh",
+///age:"23"}
+linkImage="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg8184XmlGy4JPXNX4NOOD-KDX1I8u4jx7Xw&s" 
+
+
+firstName="sami"
+lastName="abedelhafidhh"
+age="23"
+
+  
 
 number=1
 titleStyle="color=red"
@@ -31,8 +39,12 @@ green(){
 }
 
 
-verif=true
+verif=false
 
 dataArray=["tunisia","morroco","france","kelibia"]
+
+
+style1="green"
+style2="30px"
 
 }

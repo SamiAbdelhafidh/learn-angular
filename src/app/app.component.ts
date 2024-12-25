@@ -6,6 +6,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
+
 @Component({
   selector: 'app-root',
   standalone:true,
@@ -14,6 +15,8 @@ import { NgModule } from '@angular/core';
     AboutComponent,
     NavbarComponent,
     FormsModule,
+
+
 
 
   ],

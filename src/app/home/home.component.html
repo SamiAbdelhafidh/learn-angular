@@ -24,20 +24,36 @@
 
 <p>{{profile.firstName}} {{profile.lastName}} </p>
 <input type="text" [(ngModule)]="profile.firstName" >
-<input type="text" [(ngModule)]="profile.lastName" >  ng module !!!
+<input type="text" [(ngModule)]="profile.lastName" >  ng module !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+
+
+
+
+<p>{{ "Hello worlDd" | uppercase }}</p>  Affiche : hello world 
+{{ 'AZIZAA' | lowercase }}
+
+
+<p *ngIf=verif>welcome </p> 
+
+
+<div *ngFor="let item of dataArray">
+    <p>{{item}}</p>
+</div> 
+
+<p>{{number}}</p>
+<input type="text">
+
+
+<p [ngClass]="'title'">Sami abdelhafidh</p>
+
+
+<p [ngStyle]="{'color':style1,'font-size':style2}"> Sami abdelhafidh </p>
 -->
 
 
 
 
 
-
-<p>{{profile.lastName | uppercase}}</p>
-
-
-<!--<p *ngIf=verif>welcome </p> 
-
-
-<div *ngFor="let item of dataArray">
-    <p>{{item}}</p>
-</div> -->
