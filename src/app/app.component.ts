@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink,RouterOutlet } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
-import { NavbarComponent } from './navbar/navbar.component';
+import { ProfilComponent } from './profil/profil.component';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
@@ -11,9 +11,10 @@ import { NgModule } from '@angular/core';
   selector: 'app-root',
   standalone:true,
   imports: [RouterOutlet,
+    RouterLink,
     HomeComponent,
     AboutComponent,
-    NavbarComponent,
+    ProfilComponent,
     FormsModule,
 
 

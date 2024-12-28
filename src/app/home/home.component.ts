@@ -10,10 +10,10 @@ import { NgModule } from '@angular/core';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
- /// profile={
-///firstName:"sami",
-///lastName:"abedelhafidh",
-///age:"23"}
+profile={
+firstName:"bassem",
+lastName:"abedelhafidh",
+age:"23"}
 linkImage="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg8184XmlGy4JPXNX4NOOD-KDX1I8u4jx7Xw&s" 
 
 
@@ -46,5 +46,12 @@ dataArray=["tunisia","morroco","france","kelibia"]
 
 style1="green"
 style2="30px"
+
+date="12/27/2024"
+
+
+
+
+
 
 }
