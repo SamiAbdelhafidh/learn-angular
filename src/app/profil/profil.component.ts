@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-
+import { Component,OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-profil',
   imports: [],
@@ -7,5 +7,21 @@ import { Component } from '@angular/core';
   styleUrl: './profil.component.css'
 })
 export class ProfilComponent {
+  name=''
+  id=''
+  country=''
+  constructor(private route:ActivatedRoute){
+    this.route.queryParams.subscribe(data=>{
+   
+     // this.name=data.name
+     // this.id=data.id
+      //this.country=data.country
 
+    })
+    
+  
+  }
+  ngOnInit(): void {
+    
+  }  
 }
