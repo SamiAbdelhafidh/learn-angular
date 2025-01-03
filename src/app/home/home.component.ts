@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule,CurrencyPipe, DatePipe, TitleCasePipe,UpperCasePipe } from '@angular/common';
 
 import { NgModule } from '@angular/core';
@@ -48,9 +48,16 @@ style1="green"
 style2="30px"
 
 date="12/27/2024"
+constructor(private route:Routes){
 
+}
 
+goToDet(){
+  this.route.navigate(['/profil/details'])
+}
+goToView(){
 
+}
 
 
 
