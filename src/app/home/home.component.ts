@@ -48,15 +48,15 @@ style1="green"
 style2="30px"
 
 date="12/27/2024"
-constructor(private route:Routes){
-
+constructor(private route:Router,private share:ShareServiceService){
+    this.share.print()
 }
 
 goToDet(){
-  this.route.navigate(['/profil/details'])
+  //this.route.navigate(['/profil/details'])???
 }
 goToView(){
-
+  //this.route.navigate(['/profil/view'])??
 }
 
 
