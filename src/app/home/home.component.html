@@ -17,7 +17,6 @@
 <button (click)="green()">greenColor</button>
 
 
-
 <p>{{number}}</p>
 <input type="text" [(ngModule)]=number >
 
@@ -58,4 +57,13 @@
 {{profile | json}}<br>-->
 <button class="btn btn-primary" (click)="goToView()">View Profil</button>
 <button class="btn btn-success" (click)="goToDet()">Details</button>
+<br>
+<p [style]="titleStyle">welcome world to sami</p>
+<button (click)="red()">redColor</button>
+<button (click)="green()">greenColor</button>
+<br>
 
+<p>{{number}}</p>
+
+<button (click)="inc()" >inc</button>
+<button (click)="dec()">deinc</button>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule,CurrencyPipe, DatePipe, TitleCasePipe,UpperCasePipe } from '@angular/common';
-
+import { ShareServiceService } from '../services/share-service.service';
+import { Router } from '@angular/router';
 import { NgModule } from '@angular/core';
 
 @Component({
@@ -47,10 +48,6 @@ dataArray=["tunisia","morroco","france","kelibia"]
 style1="green"
 style2="30px"
 
-date="12/27/2024"
-constructor(private route:Router,private share:ShareServiceService){
-    this.share.print()
-}
 
 goToDet(){
   //this.route.navigate(['/profil/details'])???
