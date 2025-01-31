@@ -3,6 +3,8 @@ import { CommonModule,CurrencyPipe, DatePipe, TitleCasePipe,UpperCasePipe } from
 import { ShareServiceService } from '../services/share-service.service';
 import { Router } from '@angular/router';
 import { NgModule } from '@angular/core';
+z
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -55,7 +57,9 @@ goToDet(){
 goToView(){
   //this.route.navigate(['/profil/view'])??
 }
-
+add(f:NgForm){
+  console.log(f)
+}
 
 
 }

@@ -54,7 +54,7 @@
 
 
 {{date | date}} <br>
-{{profile | json}}<br>-->
+{{profile | json}}<br>
 <button class="btn btn-primary" (click)="goToView()">View Profil</button>
 <button class="btn btn-success" (click)="goToDet()">Details</button>
 <br>
@@ -67,3 +67,10 @@
 
 <button (click)="inc()" >inc</button>
 <button (click)="dec()">deinc</button>
+-->
+<form #f="NgForm" (ngSubmit)="add(f)">
+    <input type="text" name="firstName" placeholder="firstName"><br>
+    <input type="text" name="lastName" placeholder="lastName"><br>
+    <input type="number" name="age" placeholder="age "><br>
+    <button type="submit">Add</button>
+</form>
