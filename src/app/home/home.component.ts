@@ -54,11 +54,15 @@ style2="30px"
 
 
 add(f:NgForm){
-  console.log(f)
+  let data=f.value
+  console.log(data.firstName) //or afficher tous data-->console.log(data)
+  console.log(data.lastName)
+  console.log(f.value.age)
+  console.log(f.value.sexe)
 }
 constructor() {
   
- }
+ } 
  goToDet(){
   //this.route.navigate(['/profil/details'])
 }

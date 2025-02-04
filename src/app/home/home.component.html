@@ -69,9 +69,13 @@
 <button (click)="dec()">deinc</button>
 -->
 <form #f="ngForm" (ngSubmit)="add(f)">
-    <input type="text" name="firstName" placeholder="firstName"><br>
-    <input type="text" name="lastName" placeholder="lastName"><br>
-    <input type="number" name="age" placeholder="age "><br>
+    <input type="text" name="firstName" placeholder="firstName" ngModel>
+    <br>
+    <input type="text" name="lastName" placeholder="lastName" ngModel>
+    <br>
+    <input type="number" name="age" placeholder="age " ngModel>
+    <br>
+    <input type="radio" name="sexe" value="men" ngModel>
     <button type="submit">Add</button>
 </form>
 <p></p>

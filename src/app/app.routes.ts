@@ -5,7 +5,6 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ProfilComponent } from './profil/profil.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
-//import { AboutComponent } from './about/about.component';
 import { ViewComponent } from './view/view.component';
 import { DetailsComponent } from './details/details.component';
 
@@ -13,6 +12,7 @@ import { DetailsComponent } from './details/details.component';
 export const routes: Routes = [
     {path:'',component:HomeComponent},
     {path:'about',component:AboutComponent},
+    {path:'profil',component:ProfilComponent},
 
     {
     path:'profil',

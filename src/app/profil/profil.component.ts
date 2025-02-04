@@ -1,11 +1,14 @@
-import { Component,OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component,isStandalone } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
+
 @Component({
   selector: 'app-profil',
-  imports: [],
+  imports: [CommonModule,FormsModule],
   standalone:true,
   templateUrl: './profil.component.html',
-  styleUrl: './profil.component.css'
+  styleUrls: ['./profil.component.css']
 })
 export class ProfilComponent {
   name=''
