@@ -1,20 +1,20 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule,CurrencyPipe, DatePipe, TitleCasePipe,UpperCasePipe } from '@angular/common';
-import { ShareServiceService } from '../services/share-service.service';
-import { Router } from '@angular/router';
-import { NgModule } from '@angular/core';
-z
-import { FormsModule } from '@angular/forms';
+import { Component, isStandalone } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { NgForm ,FormsModule } from '@angular/forms'; // Import NgForm here
+import { Router } from 'express';
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule,UpperCasePipe,],
+  imports: [CommonModule,FormsModule],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrls: ['./home.component.css'],
+  standalone:true
 })
 export class HomeComponent {
+
 profile={
 firstName:"bassem",
+Standalone:true,
 lastName:"abedelhafidh",
 age:"23"}
 linkImage="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg8184XmlGy4JPXNX4NOOD-KDX1I8u4jx7Xw&s" 
@@ -51,15 +51,19 @@ style1="green"
 style2="30px"
 
 
-goToDet(){
-  //this.route.navigate(['/profil/details'])???
-}
-goToView(){
-  //this.route.navigate(['/profil/view'])??
-}
+
+
 add(f:NgForm){
   console.log(f)
 }
-
+constructor() {
+  
+ }
+ goToDet(){
+  //this.route.navigate(['/profil/details'])
+}
+goToView(){
+ // this.route.navigate(['/profil/view'])
+}
 
 }

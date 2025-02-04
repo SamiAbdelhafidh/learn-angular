@@ -12,17 +12,8 @@ import { NgModule } from '@angular/core';
   selector: 'app-root',
   standalone:true,
   imports: [RouterOutlet,
-    RouterLink,
-    HomeComponent,
-    AboutComponent,
-    ProfilComponent,
     NavbarComponent,
-    FormsModule,
-
-
-
-
-  ],
+    FormsModule, ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

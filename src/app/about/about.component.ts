@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { CommonModule, LowerCasePipe, UpperCasePipe } from '@angular/common';
+import { CommonModule  } from '@angular/common';
 
 
 @Component({
   selector: 'app-about',
-  imports: [CommonModule,UpperCasePipe],
+  imports: [CommonModule,],
   templateUrl: './about.component.html',
   styleUrl: './about.component.css'
 })
