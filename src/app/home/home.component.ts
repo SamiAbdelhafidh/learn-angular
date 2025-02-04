@@ -54,8 +54,9 @@ style2="30px"
 
 
 add(f:NgForm){
+  
   let data=f.value
-  console.log(data.firstName) //or afficher tous data-->console.log(data)
+  console.log(data.firstName) //or afficher tous data-->console.log(data) OR console.log(f)
   console.log(data.lastName)
   console.log(f.value.age)
   console.log(f.value.sexe)

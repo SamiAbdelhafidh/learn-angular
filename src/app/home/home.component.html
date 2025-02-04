@@ -69,13 +69,30 @@
 <button (click)="dec()">deinc</button>
 -->
 <form #f="ngForm" (ngSubmit)="add(f)">
-    <input type="text" name="firstName" placeholder="firstName" ngModel>
+    <input type="text" name="firstName" placeholder="firstName" #firstname="ngModel" ngModel required minlength="5" maxlength="20">
+    <div class="alert alert-danger" *ngIf="firstname.errors?.['required'] && firstname.touched ">
+        This firstname input is required
+    </div>
+    <div class="alert alert-danger" *ngIf="firstname.touched && firstname.errors?.['minlength'] ">
+        minlength error minimum 5 caracters
+    </div>
+    <div class="alert alert-danger" *ngIf="firstname.touched && firstname.errors?.['maxlength']  ">
+        maxlength error maximum 20 caracters
+    </div>
     <br>
-    <input type="text" name="lastName" placeholder="lastName" ngModel>
+    <input type="text" name="lastName" placeholder="lastName" #lastname="ngModel" ngModel required minlength="5" maxlength="20">
     <br>
-    <input type="number" name="age" placeholder="age " ngModel>
+    <input type="number" name="age" placeholder="age " ngModel required>
+    <div class="alert alert danger" *ngIf="lastname.touched && lastname.errors?.['required']">
+        this lastname input is required
+    </div>
+    <div class="alert alert-danger" *ngIf="lastname.touched && lastname.errors?.['minlength'] ">
+        minlength error minimum 5 caracters
+    </div>
+    <div class="alert alert-danger" *ngIf="lastname.touched && lastname.errors?.['maxlength']  ">
+        maxlength error maximum 20 caracters
+    </div>
     <br>
-    <input type="radio" name="sexe" value="men" ngModel>
-    <button type="submit">Add</button>
+    <input type="radio" name="sexe" value="men" ngModel required>
+    <button type="submit" [disabled]="f.invalid">Add</button>
 </form>
-<p>ss</p>
