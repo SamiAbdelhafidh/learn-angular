@@ -1,8 +1,8 @@
-import { Component, isStandalone } from '@angular/core';
+import { Component, isStandalone, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NgForm ,FormsModule } from '@angular/forms'; // Import NgForm here
+import { NgForm ,FormsModule, FormBuilder,Validator,FormGroup, Validators } from '@angular/forms'; // Import NgForm here
 import { Router } from 'express';
-import { FormControl,FormGroup } from '@angular/forms'
+import { FormControl } from '@angular/forms'
 
 @Component({
   selector: 'app-home',
@@ -11,16 +11,25 @@ import { FormControl,FormGroup } from '@angular/forms'
   styleUrls: ['./home.component.css'],
   standalone:true
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
   
-  myForms=new FormGroup({
-    fname:new FormControl,
-    age:new FormControl
-  })
+  myForms: any;
+
+  constructor(private formbuilder:FormBuilder) {} 
+
+  ngOnInit(): void {
+    this.myForms=this.formbuilder.group({
+      fname:['',Validators.required],
+      age:['',Validators.required]
+    });
+  }
+
+
   print(){
     console.log(this.myForms.value)
   }
-
+  
+ 
 
 
 profile={
@@ -72,9 +81,7 @@ add(f:NgForm){
   console.log(f.value.age)
   console.log(f.value.sexe)
 }
-constructor() {
-  
- } 
+
  goToDet(){
   //this.route.navigate(['/profil/details'])
 }

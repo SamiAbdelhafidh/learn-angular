@@ -100,8 +100,11 @@
 
 <form FormGroup="myForms" #ff="ngForm" (ngSubmit)="print()">
 
-    <input type="text" formControlName="fname" placeholder="fname">
-    <input type="text" formControlName="age" placeholder="age">
+    <input type="text"  placeholder="fname" required >
+    <div class="alert alert-danger" *ngIf="myForms.get('fname').touched && myForms.get('fname').hasError('required')" >
+        this input fname is required 
+    </div>
+    <input type="text"  placeholder="age" required>
     <button type="submit">Print</button>
 
 </form>
