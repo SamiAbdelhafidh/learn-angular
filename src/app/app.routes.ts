@@ -1,12 +1,16 @@
 import { RouterModule,Routes } from '@angular/router';
+
 import { NgModule } from '@angular/core';
-import {RouterOutlet, RouterLink} from '@angular/router';
+import { FormsModule } from "@angular/forms";
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ProfilComponent } from './profil/profil.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { ViewComponent } from './view/view.component';
 import { DetailsComponent } from './details/details.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
+
 
 
 export const routes: Routes = [
@@ -28,8 +32,12 @@ export const routes: Routes = [
 
    
 ];
-///@NgModule({
- ///   imports: [RouterModule.forRoot(router)],
-///    exports: [RouterModule]
-//})
-///export class AppRoutingModule{ }
+@NgModule({
+    imports: [RouterModule.forRoot(routes),
+    FormsModule,
+    ReactiveFormsModule
+],
+
+    exports: [RouterModule]
+})
+export class AppRoutingModule{ }

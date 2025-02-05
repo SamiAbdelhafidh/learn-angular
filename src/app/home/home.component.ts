@@ -2,6 +2,7 @@ import { Component, isStandalone } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgForm ,FormsModule } from '@angular/forms'; // Import NgForm here
 import { Router } from 'express';
+import { FormControl,FormGroup } from '@angular/forms'
 
 @Component({
   selector: 'app-home',
@@ -11,6 +12,16 @@ import { Router } from 'express';
   standalone:true
 })
 export class HomeComponent {
+  
+  myForms=new FormGroup({
+    fname:new FormControl,
+    age:new FormControl
+  })
+  print(){
+    console.log(this.myForms.value)
+  }
+
+
 
 profile={
 firstName:"bassem",

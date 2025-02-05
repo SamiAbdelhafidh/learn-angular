@@ -67,27 +67,27 @@
 
 <button (click)="inc()" >inc</button>
 <button (click)="dec()">deinc</button>
--->
+
 <form #f="ngForm" (ngSubmit)="add(f)">
-    <input type="text" name="firstName" placeholder="firstName" #firstname="ngModel" ngModel required minlength="5" maxlength="20">
+    <input type="text" name="firstName" placeholder="firstName" #firstname="ngModel" ngModel required minlength="4" maxlength="20">
     <div class="alert alert-danger" *ngIf="firstname.errors?.['required'] && firstname.touched ">
         This firstname input is required
     </div>
     <div class="alert alert-danger" *ngIf="firstname.touched && firstname.errors?.['minlength'] ">
-        minlength error minimum 5 caracters
+        minlength error minimum 4 caracters
     </div>
     <div class="alert alert-danger" *ngIf="firstname.touched && firstname.errors?.['maxlength']  ">
         maxlength error maximum 20 caracters
     </div>
     <br>
-    <input type="text" name="lastName" placeholder="lastName" #lastname="ngModel" ngModel required minlength="5" maxlength="20">
+    <input type="text" name="lastName" placeholder="lastName" #lastname="ngModel" ngModel required minlength="4" maxlength="20">
     <br>
     <input type="number" name="age" placeholder="age " ngModel required>
     <div class="alert alert danger" *ngIf="lastname.touched && lastname.errors?.['required']">
         this lastname input is required
     </div>
     <div class="alert alert-danger" *ngIf="lastname.touched && lastname.errors?.['minlength'] ">
-        minlength error minimum 5 caracters
+        minlength error minimum 4 caracters
     </div>
     <div class="alert alert-danger" *ngIf="lastname.touched && lastname.errors?.['maxlength']  ">
         maxlength error maximum 20 caracters
@@ -95,4 +95,13 @@
     <br>
     <input type="radio" name="sexe" value="men" ngModel required>
     <button type="submit" [disabled]="f.invalid">Add</button>
+</form>
+-->
+
+<form FormGroup="myForms" #ff="ngForm" (ngSubmit)="print()">
+
+    <input type="text" formControlName="fname" placeholder="fname">
+    <input type="text" formControlName="age" placeholder="age">
+    <button type="submit">Print</button>
+
 </form>
