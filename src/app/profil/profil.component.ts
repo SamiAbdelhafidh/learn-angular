@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component,isStandalone } from '@angular/core';
+import { Component,isStandalone, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 
@@ -10,18 +10,18 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './profil.component.html',
   styleUrls: ['./profil.component.css']
 })
-export class ProfilComponent {
-  name=''
-  id=''
-  country=''
+export class ProfilComponent implements OnInit {
+  name = '';
+  id ='';
+  country ='';
 
   constructor(private route:ActivatedRoute){
     this.route.queryParams.subscribe(data=>{
    
-    //  this.name=data.name
-    //  this.id=data.id
-    //  this.country=data.country
-    })
+      this.name=data['name'];
+      this.id=data['id'];
+      this.country=data['country'];
+    });
     
   
   }
