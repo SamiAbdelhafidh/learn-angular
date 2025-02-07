@@ -2,10 +2,11 @@ import { CommonModule } from '@angular/common';
 import { Component,isStandalone, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
+import { HomeComponent } from "../home/home.component";
 
 @Component({
   selector: 'app-profil',
-  imports: [CommonModule,FormsModule],
+  imports: [CommonModule, FormsModule, HomeComponent],
   standalone:true,
   templateUrl: './profil.component.html',
   styleUrls: ['./profil.component.css']

@@ -14,7 +14,7 @@ import { NgModule } from '@angular/core';
   imports: [RouterOutlet,
     NavbarComponent,
     FormsModule,
-    ReactiveFormsModule ],
+    ReactiveFormsModule, ProfilComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
