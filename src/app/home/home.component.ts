@@ -1,8 +1,8 @@
 import { Component, isStandalone, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NgForm ,FormsModule, FormBuilder,Validator,FormGroup, Validators } from '@angular/forms'; // Import NgForm here
+import { NgForm ,FormsModule, FormBuilder,FormGroup,FormControl, Validators } from '@angular/forms'; // Import NgForm here
 import { Router } from 'express';
-import { FormControl } from '@angular/forms'
+
 
 @Component({
   selector: 'app-home',
@@ -20,14 +20,21 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.myForms=this.formbuilder.group({
       fname:['',Validators.required],
-      age:['',Validators.required]
+      age:['',Validators.required],
     });
   }
 
 
-  print(){
-    console.log(this.myForms.value)
+  print(ff:NgForm){
+    console.log(ff.value)
   }
+  get fname(){
+    return this.myForms.get('fname')
+  }
+  get age(){
+    return this.myForms.get('age')
+  }
+
   
  
 
@@ -42,7 +49,7 @@ linkImage="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg8184XmlGy4JPX
 
 firstName="sami"
 lastName="abedelhafidhh"
-age="23"
+
 
   
 

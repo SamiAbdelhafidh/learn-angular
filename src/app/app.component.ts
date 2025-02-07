@@ -4,7 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ProfilComponent } from './profil/profil.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
 
@@ -13,7 +13,8 @@ import { NgModule } from '@angular/core';
   standalone:true,
   imports: [RouterOutlet,
     NavbarComponent,
-    FormsModule, ],
+    FormsModule,
+    ReactiveFormsModule ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

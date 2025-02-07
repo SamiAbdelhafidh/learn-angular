@@ -68,6 +68,21 @@
 <button (click)="inc()" >inc</button>
 <button (click)="dec()">deinc</button>
 
+ -->
+<form #ff="ngForm" (ngSubmit)="print(ff)">
+
+    <input type="text" #fname="ngModel" ngModel name="fname" placeholder="First Name" required>
+    <div class="alert alert-danger" *ngIf="fname.touched && fname.invalid && fname.hasError('required')">
+        This input fname is required
+    </div>
+
+    <input type="text" #age="ngModel" ngModel name="age" placeholder="Age" required>
+
+    <button type="submit">Print</button>
+
+</form>
+
+<!--
 <form #f="ngForm" (ngSubmit)="add(f)">
     <input type="text" name="firstName" placeholder="firstName" #firstname="ngModel" ngModel required minlength="4" maxlength="20">
     <div class="alert alert-danger" *ngIf="firstname.errors?.['required'] && firstname.touched ">
@@ -98,13 +113,5 @@
 </form>
 -->
 
-<form FormGroup="myForms" #ff="ngForm" (ngSubmit)="print()">
 
-    <input type="text"  placeholder="fname" required >
-    <div class="alert alert-danger" *ngIf="myForms.get('fname').touched && myForms.get('fname').hasError('required')" >
-        this input fname is required 
-    </div>
-    <input type="text"  placeholder="age" required>
-    <button type="submit">Print</button>
 
-</form>
