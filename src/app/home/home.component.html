@@ -88,7 +88,7 @@
 
 <form #f="ngForm" (ngSubmit)="add(f)">
     <input type="text" name="firstName" placeholder="firstName" #firstname="ngModel" ngModel required minlength="4" maxlength="20">
-    <div class="alert alert-danger" *ngIf="firstname.errors?.['required'] && firstname.touched ">
+    <div class="alert alert-danger" *ngIf="firstname.errors?.['required'] && firstname.touched " >
         This firstname input is required
     </div>
     <div class="alert alert-danger" *ngIf="firstname.touched && firstname.errors?.['minlength'] ">
