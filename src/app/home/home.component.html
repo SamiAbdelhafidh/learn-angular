@@ -98,7 +98,7 @@
         maxlength error maximum 20 caracters
     </div>
     <br>
-    <input type="text" name="lastName" placeholder="lastName" #lastname="ngModel" ngModel required minlength="4" maxlength="20">
+    <input type="text" name="lastName" placeholder="lastName" #lastname="ngModel"  ngModel required minlength="4" maxlength="20">
     <br>
     <input type="number" name="age" placeholder="age " ngModel required>
     <div class="alert alert danger" *ngIf="lastname.touched && lastname.errors?.['required']">
