@@ -69,7 +69,7 @@
 <button (click)="dec()">deinc</button>
 
  -->
-<form #ff="ngForm" (ngSubmit)="print(ff)">
+<!--<form #ff="ngForm" (ngSubmit)="print(ff)">
 
     <input type="text" #fname="ngModel" ngModel name="fname" placeholder="First Name" required>
     <div class="alert alert-danger" *ngIf="fname.touched && fname.invalid && fname.hasError('required')">
@@ -82,9 +82,9 @@
 
 </form>
 
-<ng-container select="ng-container"></ng-container>
+<ng-container select="ng-container"></ng-container>-->
 
-<!--  GOOD EXAMPLE FOR MEE
+<!--  GOOD EXAMPLE FOR MEE-->
 
 <form #f="ngForm" (ngSubmit)="add(f)">
     <input type="text" name="firstName" placeholder="firstName" #firstname="ngModel" ngModel required minlength="4" maxlength="20">
@@ -114,7 +114,7 @@
     <input type="radio" name="sexe" value="men" ngModel required>
     <button type="submit" [disabled]="f.invalid">Add</button>
 </form>
--->
+
 
 
 
