@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
   
   myForms: any;
 
-  constructor(private formbuilder:FormBuilder  ) {} 
+  constructor(private formbuilder:FormBuilder ) {} 
 
   ngOnInit(): void {
     this.myForms=this.formbuilder.group({
